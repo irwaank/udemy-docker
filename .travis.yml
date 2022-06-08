@@ -10,14 +10,16 @@ before_install:
 script:
   - docker run -e CI=true irwaank/udemy_docker npm run test -- --coverage
 
-# deploy:
-#   provider: elasticbeanstalk
-#   region: "ap-south-1"
-#   app: "docker-react"
-#   env: "DockerReact-env"
-#   bucket_name: "elasticbeanstalk-ap-south-1-447272561164"
-#   bucket_path: "docker-react"
-#   on:
-#     branch: master
-#   access_key_id: $AWS_ACCESS_KEY
-#   secret_access_key: $AWS_SECRET_KEY
+deploy:
+  provider: elasticbeanstalk
+  region: "ap-southeast-1"
+  # The name of elasticbeanstalk
+  app: "docker_udemy"
+  env: "Dockerudemy-env"
+  bucket_name: "elasticbeanstalk-ap-southeast-1-472653352833"
+  # The "bucket_path" should exaclty same with value of "app"
+  bucket_path: "docker_udemy"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: "$AWS_SECRET_KEY"
