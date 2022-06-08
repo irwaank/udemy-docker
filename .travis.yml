@@ -15,7 +15,7 @@ deploy:
   region: "ap-southeast-1"
   # The name of elasticbeanstalk
   app: "docker_udemy"
-  env: "Dockerudemy-env"
+  env: "Dockerudemy-env-1"
   bucket_name: "elasticbeanstalk-ap-southeast-1-472653352833"
   # The "bucket_path" should exaclty same with value of "app"
   bucket_path: "docker_udemy"
